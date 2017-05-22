@@ -14,3 +14,14 @@ function findLongestWord(str) {
 
 findLongestWord("The quick brown fox jumped and kicked over the lazy dog");
 // ["jumped", "kicked"]
+
+//Revised solution
+function findLongestWord(str) {    
+     var word = str.split(" ");
+     var s = Math.max.apply(null, word.map(function(str){return str.length;}));
+     return word.filter(function(val){
+              return val.length == s;
+              })   
+}
+findLongestWord("The quick brown fox jumped and kicked over the lazy dog");
+// ["jumped", "kicked"]
