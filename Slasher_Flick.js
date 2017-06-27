@@ -10,7 +10,7 @@ function slasher(arr, howMany) {
   return arr.slice(howMany);
 }
 
-slasher([1, 2, 3], 2);
+slasher([1, 2, 3], 2);//return [3]
 
 //Solution 1 with splice
 function slasher(arr, howMany) {
@@ -18,4 +18,4 @@ function slasher(arr, howMany) {
   return arr.splice(howMany);
 }
 
-slasher([1, 2, 3], 2);
+slasher([1, 2, 3], 2);//return [3]
