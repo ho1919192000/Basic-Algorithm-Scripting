@@ -28,8 +28,9 @@ function chunkArrayInGroups(arr, size) {
 
 chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6], 3) //return [[0, 1, 2], [3, 4, 5], [6]]
 
-//Solution 3 with tail recursive from Kenneth Lin
+//Solution 3 with tail recursive
 function chunkArrayInGroups2(arr, rowSize, arr2d) {
+    var arr2d = arr2d||[];
     if (arr.length <= rowSize) {
         arr2d.push(arr);
         return arr2d;
@@ -38,4 +39,4 @@ function chunkArrayInGroups2(arr, rowSize, arr2d) {
     return chunkArrayInGroups2(arr.slice(rowSize), rowSize, arr2d);
 }
 // call the function like this
-chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6], 3, [ ]); //return [[0, 1, 2], [3, 4, 5], [6]]
+chunkArrayInGroups2([0, 1, 2, 3, 4, 5, 6], 3);
